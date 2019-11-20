@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.text {
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    background: aqua;
+    width: 0%;
+    height: 100%;
+    right: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.container:hover .text::before,
+.container:hover::before {
+    width: 100%;
+}
