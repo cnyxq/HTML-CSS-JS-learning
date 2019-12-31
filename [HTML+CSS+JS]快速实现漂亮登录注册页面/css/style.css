@@ -95,3 +95,8 @@ form button {
   box-shadow: 0 0 8px rgb(181, 154, 254);
   cursor: pointer;
 }
+.xxx {
+  font-size: 15px;
+  color: rgb(181, 154, 254);
+  padding-left: 30px;
+}
